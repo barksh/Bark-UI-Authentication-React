@@ -2,20 +2,31 @@
     "name": "@barksh-ui/authentication-browser",
     "private": true,
     "version": "1.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
     "dependencies": {
-        "connor": "^2.7.0"
+        "@sudoo/react-force": "^2.0.0",
+        "styled-components": "^5.3.6"
     },
     "devDependencies": {
+        "@sudoo/react-force-dev": "^2.0.0",
         "@sudoo/triforce": "^3.10.1",
+        "@vitejs/plugin-react": "^3.1.0",
         "dotenv": "^16.0.3",
-        "lit": "^2.6.1"
+        "ts-node": "^10.9.1",
+        "vite": "^4.1.1"
     },
     "nyc": {
         "extension": [
-            ".ts"
+            ".ts",
+            ".tsx"
         ],
         "include": [
-            "src/**/*.ts"
+            "src/**/*.ts",
+            "src/**/*.tsx"
         ],
         "instrument": true,
         "reporter": [
