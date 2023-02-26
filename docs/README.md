@@ -1,3 +1,3 @@
-# Bark-UI-Authentication-React
+# Bark-UI-Authentication-Browser
 
-React UI for Bark Authentication
+Browser UI for Bark Authentication
