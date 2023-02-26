@@ -1,6 +1,6 @@
 /**
  * @author WMXPY
- * @namespace BuilderHub
+ * @namespace AuthenticationUI
  * @description Main
  */
 
