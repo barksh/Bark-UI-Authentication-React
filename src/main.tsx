@@ -6,9 +6,10 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { EntryView } from "./entry";
 
 ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement,
 ).render(<React.StrictMode>
-    <div>123</div>
+    <EntryView />
 </React.StrictMode>);

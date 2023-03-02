@@ -232,6 +232,19 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
+"@barksh/authentication-types@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@barksh/authentication-types/-/authentication-types-1.0.0.tgz#006b61f4dc1291292c61bd47d5626a4724e3af0a"
+  integrity sha512-bM0wZOM6QwRsFUvo95aPDbfpcxA1cd0On1tB9Y66n9Gz25pIR5LOQsHh5XjKxCTfR5rXnqL7DX1yrK7zZUXS4w==
+
+"@barksh/client-authenticator-browser@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@barksh/client-authenticator-browser/-/client-authenticator-browser-1.0.0.tgz#653180d9952daaf91ba79e0b84c38d5bd6de1423"
+  integrity sha512-YmCVVFf5yWSK3K4pyBqB/DCsX+INB2AYaKngfwFJqM7LTYSbVhT47Y1JBHVon4UD+bBDACJiIOCM8wGiDcM6Mw==
+  dependencies:
+    "@sudoo/magic" "^1.9.0"
+    connor "^2.8.0"
+
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz#00629c35a688e05a88b1cda684fb9d5e73f000a1"
@@ -495,6 +508,11 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.4.tgz#cbfbec6735711e7c2fc93b9b40adf70ef5a39990"
   integrity sha512-gTL8H5USTAKOyVA4xczzDJnC3HMssdFa3tRlwBicXynx9XfiXwneHnYQogwSKpdCkjXISrEKSTtX62rLpNEVQg==
 
+"@remix-run/router@1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.3.3.tgz#d6d531d69c0fa3a44fda7dc00b20d49b44549164"
+  integrity sha512-YRHie1yQEj0kqqCTCJEfHqYSSNlZQ696QJG+MMiW4mxSl9I0ojz/eRhJS4fs88Z5i6D1SmoF9d3K99/QOhI8/w==
+
 "@sudoo/eslint-config-react-a11y@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@sudoo/eslint-config-react-a11y/-/eslint-config-react-a11y-1.0.0.tgz#6782f38a9f7a31a0a3bd189ded2ebb3eef7ad70a"
@@ -509,6 +527,11 @@
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@sudoo/eslint-config/-/eslint-config-1.9.0.tgz#b42d65c1458052680b185c4b31dec42ec26cfbab"
   integrity sha512-TgGdJQB93go9pknnDv5klolsa1bvJwiXVur+S5oL6TY0xg3C4QQeqeNHhOZ2qD4bkZ2upwr2N/LraUfxRJz8hg==
+
+"@sudoo/magic@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@sudoo/magic/-/magic-1.9.0.tgz#8ba9485604d85c6f88dd891d393e3bb4bc508355"
+  integrity sha512-3z6oK1cEh0uXIyQXgiReQB7IdORIfY638MsiwKyUjXPZeetHiLdLQpNEiCbAxTDPb7kaQvRT7xHlMFI7/LwA+g==
 
 "@sudoo/mocha-config-react-native@3.1.0":
   version "3.1.0"
@@ -1246,6 +1269,11 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
+
+connor@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/connor/-/connor-2.8.0.tgz#6195ae58c09b72952dc9dc86df77e568f88d12b8"
+  integrity sha512-qWv0edrHj3gFC050tRGOGkdPBbRAUnKlF2jB4otWnByaKV3jj3l02lcUBXll+YfkKmS1Wuay0JLMwXTy1O2Wqw==
 
 convert-source-map@^1.7.0:
   version "1.9.0"
@@ -3134,12 +3162,27 @@ react-router-dom@6.4.4:
     "@remix-run/router" "1.0.4"
     react-router "6.4.4"
 
+react-router-dom@^6.8.2:
+  version "6.8.2"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.8.2.tgz#a6654a3400be9aafd504d7125573568921b78b57"
+  integrity sha512-N/oAF1Shd7g4tWy+75IIufCGsHBqT74tnzHQhbiUTYILYF0Blk65cg+HPZqwC+6SqEyx033nKqU7by38v3lBZg==
+  dependencies:
+    "@remix-run/router" "1.3.3"
+    react-router "6.8.2"
+
 react-router@6.4.4:
   version "6.4.4"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.4.tgz#8e7794f55ccc7050cb03937c87ff3720ce9f8b60"
   integrity sha512-SA6tSrUCRfuLWeYsTJDuriRqfFIsrSvuH7SqAJHegx9ZgxadE119rU8oOX/rG5FYEthpdEaEljdjDlnBxvfr+Q==
   dependencies:
     "@remix-run/router" "1.0.4"
+
+react-router@6.8.2:
+  version "6.8.2"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.8.2.tgz#98f83582a73f316a3287118b440f0cee30ed6f33"
+  integrity sha512-lF7S0UmXI5Pd8bmHvMdPKI4u4S5McxmHnzJhrYi9ZQ6wE+DA8JN5BzVC5EEBuduWWDaiJ8u6YhVOCmThBli+rw==
+  dependencies:
+    "@remix-run/router" "1.3.3"
 
 react@18.2.0:
   version "18.2.0"
