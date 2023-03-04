@@ -29,11 +29,15 @@ export const RegisteringView: React.FC = () => {
 
                 console.log(touchResult);
 
-                navigate("/sign-in");
+                navigate("/sign-in", {
+                    replace: true,
+                });
             }
         } catch (err) {
 
-            navigate("/error");
+            navigate("/error", {
+                replace: true,
+            });
 
             console.log(err);
         }

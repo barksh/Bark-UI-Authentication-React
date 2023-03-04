@@ -9,6 +9,7 @@ import { createMemoryRouter } from "react-router-dom";
 import { ErrorView } from "./routes/error";
 import { RegisteringView } from "./routes/registering";
 import { SignInView } from "./routes/sign-in";
+import { SubmittedView } from "./routes/submitted";
 
 const routes = [
     {
@@ -22,6 +23,10 @@ const routes = [
     {
         path: "/error",
         element: <ErrorView /> as React.ReactElement,
+    },
+    {
+        path: "/submitted",
+        element: <SubmittedView /> as React.ReactElement,
     },
 ];
 

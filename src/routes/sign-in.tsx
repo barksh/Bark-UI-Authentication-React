@@ -6,8 +6,11 @@
 
 import { barkFinalizeV1, Portal } from "@barksh/client-authenticator-browser";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const SignInView: React.FC = () => {
+
+    const navigate = useNavigate();
 
     const portal: Portal = Portal.getInstance();
 
@@ -16,13 +19,17 @@ export const SignInView: React.FC = () => {
 
     const submitAction = async (): Promise<void> => {
 
-        barkFinalizeV1('http://localhost:4000',
+        await barkFinalizeV1('http://localhost:4000',
             {
                 exposureKey: portal.exposureKey,
                 accountIdentifier,
                 password,
             },
         );
+
+        navigate("/submitted", {
+            replace: true,
+        });
     };
 
     return (<div>
