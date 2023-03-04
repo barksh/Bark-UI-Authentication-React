@@ -24,9 +24,12 @@ jobs:
         run: |
           npm install @sudoo/build-cli -g
           sudoo-build install
-      - name: Build Storybook
+      - name: Build Project
         run: |
+          echo "Using VITE_MODULE_AUTHENTICATION_HOST: $VITE_MODULE_AUTHENTICATION_HOST"
           yarn run build
+        env:
+          VITE_MODULE_AUTHENTICATION_HOST: ${{ vars.VITE_MODULE_AUTHENTICATION_HOST }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
