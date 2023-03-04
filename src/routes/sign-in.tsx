@@ -7,6 +7,7 @@
 import { barkFinalizeV1, Portal } from "@barksh/client-authenticator-browser";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
+import { EnvironmentVariables } from "../util/environment";
 
 export const SignInView: React.FC = () => {
 
@@ -19,7 +20,7 @@ export const SignInView: React.FC = () => {
 
     const submitAction = async (): Promise<void> => {
 
-        await barkFinalizeV1('http://localhost:4000',
+        await barkFinalizeV1(EnvironmentVariables.moduleAuthenticationHost,
             {
                 exposureKey: portal.exposureKey,
                 accountIdentifier,

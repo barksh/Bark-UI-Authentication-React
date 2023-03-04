@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "description": "Browser UI for Bark Authentication",
     "scripts": {
-        "dev": "vite",
+        "dev": "export VITE_MODULE_AUTHENTICATION_HOST=\"http://localhost:4000\" && vite",
         "build": "tsc && vite build",
         "preview": "vite preview"
     },

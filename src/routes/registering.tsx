@@ -8,6 +8,7 @@ import { PostTouchV1ProxyResponse } from "@barksh/authentication-types";
 import { Portal, postTouchV1Proxy } from "@barksh/client-authenticator-browser";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
+import { EnvironmentVariables } from "../util/environment";
 
 export const RegisteringView: React.FC = () => {
 
@@ -21,7 +22,7 @@ export const RegisteringView: React.FC = () => {
 
                 const portal: Portal = Portal.getInstance();
                 const touchResult: PostTouchV1ProxyResponse = await postTouchV1Proxy(
-                    'http://localhost:4000',
+                    EnvironmentVariables.moduleAuthenticationHost,
                     {
                         exposureKey: portal.exposureKey,
                     },
