@@ -15,28 +15,39 @@ export const SignInView: React.FC = () => {
 
     const portal: Portal = Portal.getInstance();
 
+    const [loading, setLoading] = React.useState(false);
+
     const [accountIdentifier, setAccountIdentifier] = React.useState('');
     const [password, setPassword] = React.useState('');
 
     const submitAction = async (): Promise<void> => {
 
-        await barkFinalizeV1(EnvironmentVariables.moduleAuthenticationHost,
-            {
-                exposureKey: portal.exposureKey,
-                accountIdentifier,
-                password,
-            },
-        );
+        setLoading(true);
 
-        navigate("/submitted", {
-            replace: true,
-        });
+        try {
+            await barkFinalizeV1(EnvironmentVariables.moduleAuthenticationHost,
+                {
+                    exposureKey: portal.exposureKey,
+                    accountIdentifier,
+                    password,
+                },
+            );
+
+            navigate("/submitted", {
+                replace: true,
+            });
+        } catch (error) {
+
+            console.log(error);
+            setLoading(false);
+        }
     };
 
     return (<div>
         {portal.exposureKey}
         <br />
         <input
+            disabled={loading}
             type="text"
             placeholder="account identifier"
             value={accountIdentifier}
@@ -45,6 +56,7 @@ export const SignInView: React.FC = () => {
             }}
         />
         <input
+            disabled={loading}
             type="password"
             placeholder="password"
             value={password}
@@ -53,9 +65,12 @@ export const SignInView: React.FC = () => {
             }}
         />
         <button
+            disabled={loading}
             onClick={() => {
                 submitAction();
             }}
         >Sign-in</button>
+        <br />
+        {loading ? 'Loading...' : null}
     </div>);
 };
