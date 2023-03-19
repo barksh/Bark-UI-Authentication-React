@@ -4,6 +4,7 @@
  * @description Sign In
  */
 
+import { Button, Card, InputText } from "@barksh/bark-design-react";
 import { barkFinalizeV1, Portal } from "@barksh/client-authenticator-browser";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
@@ -46,30 +47,33 @@ export const SignInView: React.FC = () => {
     return (<div>
         {portal.exposureKey}
         <br />
-        <input
-            disabled={loading}
-            type="text"
-            placeholder="account identifier"
-            value={accountIdentifier}
-            onChange={(event) => {
-                setAccountIdentifier(event.target.value);
-            }}
-        />
-        <input
-            disabled={loading}
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(event) => {
-                setPassword(event.target.value);
-            }}
-        />
-        <button
-            disabled={loading}
-            onClick={() => {
-                submitAction();
-            }}
-        >Sign-in</button>
+        <Card
+            actions={<Button
+                onClick={() => {
+                    submitAction();
+                }}
+            >
+                Sign-in
+            </Button>}
+        >
+            <InputText
+                title="Account Identifier"
+                placeholder="Account Identifier"
+                value={accountIdentifier}
+                onChange={(value: string) => {
+                    setAccountIdentifier(value);
+                }}
+            />
+            <InputText
+                title="Password"
+                placeholder="Password"
+                value={password}
+                onChange={(value: string) => {
+                    setPassword(value);
+                }}
+            />
+        </Card>
+
         <br />
         {loading ? 'Loading...' : null}
     </div>);
