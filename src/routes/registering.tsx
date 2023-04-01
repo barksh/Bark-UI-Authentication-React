@@ -5,6 +5,7 @@
  */
 
 import { PostTouchV1ProxyResponse } from "@barksh/authentication-types";
+import { CenteredLayout } from "@barksh/bark-design-react";
 import { Portal, postTouchV1Proxy } from "@barksh/client-authenticator-browser";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
@@ -48,7 +49,7 @@ export const RegisteringView: React.FC = () => {
         effect();
     }, []);
 
-    return (<div>
+    return (<CenteredLayout>
         Registering
-    </div>);
+    </CenteredLayout>);
 };
