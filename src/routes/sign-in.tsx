@@ -4,11 +4,12 @@
  * @description Sign In
  */
 
-import { Button, Card, InputText } from "@barksh/bark-design-react";
+import { Button, Card, CenteredLayout, InputText } from "@barksh/bark-design-react";
 import { barkFinalizeV1, Portal } from "@barksh/client-authenticator-browser";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { EnvironmentVariables } from "../util/environment";
+import { MdLockOpen } from "react-icons/md";
 
 export const SignInView: React.FC = () => {
 
@@ -44,11 +45,16 @@ export const SignInView: React.FC = () => {
         }
     };
 
-    return (<div>
-        {portal.exposureKey}
-        <br />
+    return (<CenteredLayout>
         <Card
+            size="large"
+            headerTitle={`Sign-in`}
+            minWidth="min(512px, 100vw)"
+            maxWidth="768px"
             actions={<Button
+                prefix={<MdLockOpen
+                    size={24}
+                />}
                 onClick={() => {
                     submitAction();
                 }}
@@ -59,6 +65,7 @@ export const SignInView: React.FC = () => {
             <InputText
                 title="Account Identifier"
                 placeholder="Account Identifier"
+                maximize
                 value={accountIdentifier}
                 onChange={(value: string) => {
                     setAccountIdentifier(value);
@@ -67,6 +74,7 @@ export const SignInView: React.FC = () => {
             <InputText
                 title="Password"
                 placeholder="Password"
+                maximize
                 value={password}
                 onChange={(value: string) => {
                     setPassword(value);
@@ -76,5 +84,5 @@ export const SignInView: React.FC = () => {
 
         <br />
         {loading ? 'Loading...' : null}
-    </div>);
+    </CenteredLayout>);
 };
