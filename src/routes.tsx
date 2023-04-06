@@ -10,6 +10,7 @@ import { ErrorView } from "./routes/error";
 import { RegisteringView } from "./routes/registering";
 import { SignInView } from "./routes/sign-in";
 import { SubmittedView } from "./routes/submitted";
+import { ExposureKeyView } from "./routes/exposure-key";
 
 const routes = [
     {
@@ -23,6 +24,10 @@ const routes = [
     {
         path: "/error",
         element: <ErrorView /> as React.ReactElement,
+    },
+    {
+        path: "/exposure-key",
+        element: <ExposureKeyView /> as React.ReactElement,
     },
     {
         path: "/submitted",

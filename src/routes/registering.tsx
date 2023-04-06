@@ -18,6 +18,7 @@ export const RegisteringView: React.FC = () => {
     const effect = async () => {
 
         try {
+
             if (!Portal.isRegistered()) {
                 Portal.register();
 
