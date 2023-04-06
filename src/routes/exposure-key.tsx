@@ -5,7 +5,7 @@
  */
 
 import { PostTouchV1ProxyResponse } from "@barksh/authentication-types";
-import { Button, Card, CenteredLayout, InputText, Spacing } from "@barksh/bark-design-react";
+import { Button, Card, CenteredLayout, InputText, LoadingContainerRectangle, Spacing } from "@barksh/bark-design-react";
 import { postTouchV1Proxy } from "@barksh/client-authenticator-browser";
 import { SudooFormat } from "@sudoo/internationalization";
 import * as React from "react";
@@ -26,21 +26,30 @@ export const ExposureKeyView: React.FC = () => {
 
         setLoading(true);
 
-        const touchResult: PostTouchV1ProxyResponse = await postTouchV1Proxy(
-            EnvironmentVariables.moduleAuthenticationHost,
-            {
-                exposureKey,
-            },
-        );
+        try {
 
-        console.log(touchResult);
+            const touchResult: PostTouchV1ProxyResponse = await postTouchV1Proxy(
+                EnvironmentVariables.moduleAuthenticationHost,
+                {
+                    exposureKey,
+                },
+            );
+
+            console.log(touchResult);
+        } catch (error) {
+
+            console.log(error);
+        }
     };
 
     return (<CenteredLayout>
         <Card
             size="large"
+            loadingProvider={LoadingContainerRectangle}
+            loading={loading}
             headerTitle={format.get(PROFILE.MANUAL_INPUT_EXPOSURE_KEY)}
             minWidth="min(512px, 100vw)"
+            minHeight="min(256px, 100vh)"
             maxWidth="768px"
             actions={<Button
                 prefix={<MdOutbound
@@ -67,8 +76,5 @@ export const ExposureKeyView: React.FC = () => {
                 }}
             />
         </Card>
-
-        <br />
-        {loading ? 'Loading...' : null}
     </CenteredLayout>);
 };
