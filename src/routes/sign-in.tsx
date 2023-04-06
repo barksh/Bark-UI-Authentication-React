@@ -4,12 +4,12 @@
  * @description Sign In
  */
 
-import { Button, Card, CenteredLayout, InputText } from "@barksh/bark-design-react";
-import { barkFinalizeV1, Portal } from "@barksh/client-authenticator-browser";
+import { Button, Card, CenteredLayout, InputText, LoadingContainerRectangle } from "@barksh/bark-design-react";
+import { Portal, barkFinalizeV1 } from "@barksh/client-authenticator-browser";
 import * as React from "react";
+import { MdLockOpen } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { EnvironmentVariables } from "../util/environment";
-import { MdLockOpen } from "react-icons/md";
 
 export const SignInView: React.FC = () => {
 
@@ -49,6 +49,8 @@ export const SignInView: React.FC = () => {
         <Card
             size="large"
             headerTitle={`Sign-in`}
+            loadingProvider={LoadingContainerRectangle}
+            loading={loading}
             minWidth="min(512px, 100vw)"
             maxWidth="768px"
             actions={<Button
@@ -81,8 +83,5 @@ export const SignInView: React.FC = () => {
                 }}
             />
         </Card>
-
-        <br />
-        {loading ? 'Loading...' : null}
     </CenteredLayout>);
 };
