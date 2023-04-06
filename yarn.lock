@@ -237,10 +237,10 @@
     "@sudoo/random" "^2.2.0"
     styled-components "^5.3.9"
 
-"@barksh/client-authenticator-browser@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@barksh/client-authenticator-browser/-/client-authenticator-browser-1.2.0.tgz#2eb9086f848b5d440232fd968d4ca73b8c8e5fa3"
-  integrity sha512-FJB2ILQ9aCy1BSRq21NBARKSCd8BnMpqq4SddXIoSWa6t7/nOMRP111DM5+W93EPbm2gcnvDv0KyiD45D9pFjQ==
+"@barksh/client-authenticator-browser@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@barksh/client-authenticator-browser/-/client-authenticator-browser-1.3.1.tgz#186557a1d16e011bce23eb4a728484d638250705"
+  integrity sha512-eoZxbiMvoH3MuemiV1TemrefBIvGUENxa6mUpXBzGheXOP8PSerqsS2uB1dT6YBXNHI0isb/61QQZ+wiN58xHg==
   dependencies:
     "@sudoo/magic" "^1.9.0"
     connor "^2.8.0"
