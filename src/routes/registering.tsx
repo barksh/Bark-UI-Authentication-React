@@ -30,10 +30,12 @@ export const RegisteringView: React.FC = () => {
                     },
                 );
 
-                console.log(touchResult);
-
                 navigate("/sign-in", {
                     replace: true,
+                    state: {
+                        exposureKey: touchResult.exposureKey,
+                        domain: touchResult.domain,
+                    },
                 });
             }
         } catch (err) {

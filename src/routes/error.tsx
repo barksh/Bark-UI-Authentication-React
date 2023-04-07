@@ -24,6 +24,8 @@ export const ErrorView: React.FC = () => {
             prefix={<MdError
                 size={24}
             />}
+            minWidth="min(512px, 100vw)"
+            maxWidth="768px"
             contentPadding
             size="large"
             actions={<Button

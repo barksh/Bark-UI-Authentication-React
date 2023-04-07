@@ -21,6 +21,8 @@ export const SubmittedView: React.FC = () => {
             prefix={<MdRocketLaunch
                 size={24}
             />}
+            minWidth="min(512px, 100vw)"
+            maxWidth="768px"
             contentPadding
             size="large"
         >
