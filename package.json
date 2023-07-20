@@ -27,7 +27,7 @@
         "@vitejs/plugin-react": "^4.0.0",
         "dotenv": "^16.3.0",
         "ts-node": "^10.9.1",
-        "vite": "^4.4.4"
+        "vite": "^4.4.5"
     },
     "nyc": {
         "extension": [
