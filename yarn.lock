@@ -850,10 +850,10 @@
   resolved "https://registry.yarnpkg.com/@sudoo/internationalization-react/-/internationalization-react-1.5.0.tgz#d6f2ffaa5caa353dd25fd6a347e96c86895a15cb"
   integrity sha512-zM5kzn1T8q+ZB4Z1HfxFSWMfQGqB+nmnqy348N5YONtOIn5VF9UK3fD1pvCNEUivwMDX+vIM8UJZgv0vDa6Vaw==
 
-"@sudoo/internationalization@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@sudoo/internationalization/-/internationalization-1.7.1.tgz#03177747aa2bd266f926086c74ab726a4652b22f"
-  integrity sha512-8QfcQV219Q0lI9tcWBbARy9dzyO6C2wC3La7I7pJmO9pyv4lAccDCVuhab+3ql3ILGHx6RlpLPWFRu0VEKROMg==
+"@sudoo/internationalization@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@sudoo/internationalization/-/internationalization-2.0.0.tgz#9441473b1579c9ade3fac5e61619c12ebe0e273d"
+  integrity sha512-JKihHssw0IyZA23FCPZXDPqJq9DGjx3iumPCruJ9a/yfZxhrjA+R5A4SB+Ml84TMxwkwrxWAU/I/KFyZGNQvbQ==
 
 "@sudoo/magic@^1.9.0":
   version "1.9.0"
